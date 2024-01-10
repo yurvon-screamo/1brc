@@ -131,7 +131,20 @@ static void HelpMe(string path, int chunk)
                     value = -value;
                 }
 
-                int name = BitConverter.ToInt32(nameRaw);
+                int name;
+
+                if (nameRaw.Length > 2)
+                {
+                    name = BitConverter.ToInt32(nameRaw);
+                }
+                else if (nameRaw.Length == 2)
+                {
+                    name = nameRaw[0] + nameRaw[1];
+                }
+                else
+                {
+                    name = nameRaw[0];
+                }
 
                 ref Station station = ref CollectionsMarshal.GetValueRefOrAddDefault(map, name, out bool exist);
 
