@@ -139,7 +139,7 @@ static void HelpMe(string path, int chunk)
                 }
                 else if (nameRaw.Length == 2)
                 {
-                    name = nameRaw[0] + nameRaw[1];
+                    name = nameRaw[0] * -1000 + nameRaw[1];
                 }
                 else
                 {
