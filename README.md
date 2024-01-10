@@ -12,6 +12,7 @@ Tested on a i5-1240P 2.1G 12c16t, 16gb, nvme.
 * Total: 00:05.57
 * Language C#
 * Runtime net8/aot/win-x64
+* Without unsafe!
 
 ## Running
 
